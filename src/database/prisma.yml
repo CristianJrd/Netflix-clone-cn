@@ -1,0 +1,8 @@
+endpoint: ${src:PRISMA_ENDPOINT,https://us1.prisma.sh/cristian-contreras-2a437e/netflix_clone_backend/dev}
+datamodel: datamodel.graphql
+
+#Deploy Hook
+
+hooks:
+  post-deploy:
+    - graphql get-schema --project database
